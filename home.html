@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accident Detection</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles/styles.css') }}">
+</head>
+<body>
+<header>
+    <h1>Welcome to Accident Detection</h1>
+    <p>Your Safety, Our Priority</p>
+</header>
+<section class="features">
+    <div class="feature">
+        <img src="accident-icon.png" alt="Accident Icon" />
+        <h2>Real-time Detection</h2>
+        <p>Our advanced algorithms detect accidents in real-time, ensuring a rapid response.</p>
+    </div>
+    <div class="feature">
+        <img src="notification-icon.png" alt="Notification Icon" />
+        <h2>Instant Alerts</h2>
+        <p>We notify emergency services and your loved ones immediately upon detection.</p>
+    </div>
+</section>
+
+<center>
+    <p>Upload your file here to be detected and output be shown</p>
+    <form method="POST" enctype="multipart/form-data" onsubmit="return validateForm()">
+        <input type="file" name="uploadedImage" id="uploadedImage" />
+        <input type="submit" value="Upload" />
+    </form>
+</center>
+
+<footer>
+    <p>&copy; 2024 Accident Detection </p>
+</footer>
+
+<script src="{{ url_for('static', filename='scripts/index.js') }}"></script>
+</body>
+</html>
